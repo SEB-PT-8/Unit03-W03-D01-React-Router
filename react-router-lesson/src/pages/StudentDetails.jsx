@@ -12,6 +12,9 @@ function StudentDetails() {
         setStudent(oneStudent.data)
     }
 
+    useEffect(()=>{
+        getStudentDetails()
+    },[])
   return (
     <div>StudentDetails</div>
   )
