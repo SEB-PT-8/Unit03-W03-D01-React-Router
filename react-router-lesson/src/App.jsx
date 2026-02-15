@@ -14,4 +14,8 @@ function App() {
   )
 }
 
+// Exercise 1:
+// 1. Create a component called Homepage.jsx in the pages folder
+// 2. in the Homepage component write an h1 "Welcome to students website"
+// 3. create a route for the homepage at / that will show the Homepage.jsx component
 export default App
