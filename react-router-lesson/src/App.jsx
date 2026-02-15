@@ -1,4 +1,5 @@
 import {Routes, Route} from 'react-router'
+import AllStudents from './pages/AllStudents'
 function App() {
 
   // steps when working with react router
@@ -7,7 +8,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route/>
+        <Route path='/students' element={<AllStudents/>}/>
       </Routes>
     </div>
   )
