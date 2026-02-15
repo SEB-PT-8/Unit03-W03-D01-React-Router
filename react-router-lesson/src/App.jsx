@@ -3,6 +3,7 @@ import AllStudents from './pages/AllStudents'
 import Homepage from './pages/Homepage'
 import Navbar from './components/Navbar'
 import StudentDetails from './pages/StudentDetails'
+import CreateStudent from './pages/CreateStudent'
 function App() {
 
   // steps when working with react router
@@ -15,6 +16,7 @@ function App() {
         <Route path='/students' element={<AllStudents/>}/>
         <Route path='/' element={<Homepage/>}/>
         <Route path='/students/:id' element={<StudentDetails/>} />
+        <Route path='/students/create' element={<CreateStudent/>} />
       </Routes>
     </div>
   )
