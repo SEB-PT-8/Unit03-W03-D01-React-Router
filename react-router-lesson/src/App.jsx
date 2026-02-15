@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage'
 import Navbar from './components/Navbar'
 import StudentDetails from './pages/StudentDetails'
 import CreateStudent from './pages/CreateStudent'
+import PageNotFound from './pages/PageNotFound'
 function App() {
 
   // steps when working with react router
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Homepage/>}/>
         <Route path='/students/:id' element={<StudentDetails/>} />
         <Route path='/students/create' element={<CreateStudent/>} />
+        <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </div>
   )
