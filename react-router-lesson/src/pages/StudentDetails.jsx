@@ -16,7 +16,15 @@ function StudentDetails() {
         getStudentDetails()
     },[])
   return (
-    <div>StudentDetails</div>
+    <div>
+        <h1>Student Details</h1>
+
+        {student ? (<>
+            <h2>{student.name}</h2>
+            <p>{student.city}</p>
+            <p>{student.course}</p>
+        </>) : (<h2>Loading...</h2>)}
+    </div>
   )
 }
 
