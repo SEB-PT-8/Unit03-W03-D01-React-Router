@@ -1,16 +1,20 @@
 import { useState } from "react"
 import axios from 'axios'
+import { useNavigate } from "react-router"
 function CreateStudent() {
     const [formData, setFormData] = useState({
         name: '',
         city: '',
         course: ''
     })
+    const navigate = useNavigate()
 
     async function handleSubmit(event){
         event.preventDefault()
 
         const createdStudent = await axios.post('https://omar-ga-class.onrender.com/students',formData)
+
+        navigate('/students')
 
     }
 
