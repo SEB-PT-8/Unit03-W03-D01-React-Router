@@ -1,13 +1,17 @@
 import { useState } from "react"
+import axios from 'axios'
 function CreateStudent() {
-    const [formData, setFormData] = ({
+    const [formData, setFormData] = useState({
         name: '',
         city: '',
         course: ''
     })
 
-    function handleSubmit(event){
+    async function handleSubmit(event){
         event.preventDefault()
+
+        const createdStudent = await axios.post('https://omar-ga-class.onrender.com/students',formData)
+
     }
 
     function handleChange(event){
@@ -20,13 +24,13 @@ function CreateStudent() {
         <form onSubmit={handleSubmit}>
 
             <label htmlFor="name">name:</label>
-            <input onChange={handleChange} name='name' type="text" />
+            <input value={formData.name} onChange={handleChange} name='name' type="text" />
 
             <label htmlFor="city">city</label>
-            <input onChange={handleChange} name='city' type="text" />
+            <input value={formData.city} onChange={handleChange} name='city' type="text" />
 
             <label htmlFor="course">course</label>
-            <input onChange={handleChange} name='course'  type="text" />
+            <input value={formData.course} onChange={handleChange} name='course'  type="text" />
 
             <button>Create Student</button>
         </form>
