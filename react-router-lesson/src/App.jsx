@@ -1,5 +1,7 @@
 import {Routes, Route} from 'react-router'
 import AllStudents from './pages/AllStudents'
+import Homepage from './pages/Homepage'
+import Navbar from './components/Navbar'
 function App() {
 
   // steps when working with react router
@@ -7,8 +9,10 @@ function App() {
   // 2. Wrap your <App> in BrowserRouter in the main.jsx
   return (
     <div>
+      <Navbar/>
       <Routes>
         <Route path='/students' element={<AllStudents/>}/>
+        <Route path='/' element={<Homepage/>}/>
       </Routes>
     </div>
   )
