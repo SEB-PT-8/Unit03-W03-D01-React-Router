@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-
+import {Link} from 'react-router'
 function AllStudents() {
     const [students, setStudents] = useState([])
     async function getAllStudents(){
@@ -16,9 +16,10 @@ function AllStudents() {
         <h1>All Students</h1>
 
         {students.map((oneStudent)=>
-        <div>
+        <div key={oneStudent._id}>
             <h2>Name: {oneStudent.name}</h2>
             <p>Course{oneStudent.course}</p>
+            <Link to={'/students/' + oneStudent._id}>See Student Details</Link>
         </div>
         )}
     </div>
